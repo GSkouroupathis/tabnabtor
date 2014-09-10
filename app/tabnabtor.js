@@ -1,8 +1,12 @@
+/*
+* nabtabtor.js
+* 
+* George Skouroupathis
+*
+*/
 
 window.onblur =
 	function () {
-		clear_page_contents();
-		build_page("http://www.astrocamel.com");
 	}
 
 
@@ -28,4 +32,3 @@ function build_page_head() {
 
 function build_page_body() {
 }
-
