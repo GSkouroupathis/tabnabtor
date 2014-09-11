@@ -7,6 +7,8 @@
 
 window.onblur =
 	function () {
+		clear_page_contents();
+		build_page(webpage1);
 	}
 
 
@@ -23,7 +25,8 @@ function clear_page_contents() {
 	}
 }
 
-function build_page(pageName) {
+function build_page(webpage) {
+	document.write(webpage.getSource);
 }
 
 
