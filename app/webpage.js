@@ -7,13 +7,13 @@
 */
 
 // Multi-line string trick
-function hereDoc(f) {
-  return f.toString().
+function hereDoc(str) {
+  return str.toString().
       replace(/^[^\/]+\/\*!?/, '').
       replace(/\*\/[^\/]+$/, '');
 }
 
-// A site object
+// A webpage object
 function webpage(url, src) {
     this.url = url;
     this.getSource = hereDoc(src);
