@@ -8,7 +8,7 @@ and does some extra stuff
 
 How to use
 ===
-1. Just import all the files in the 'app' folder into (your) website
+1. Just import all the files in the 'app' folder into (your) website.
   If for a reason it is more convenient to import one file, then
   copy the contents of all the files into one and import that.
 2. Change the min_timeout and max_timeout. A random number of milliseconds
@@ -30,9 +30,9 @@ What it does
 
 What is also does
 ===
-- Clears all the page's elements, leaving it blank
+- Clears all the page's elements, leaving it blank:
   By calling clear_page_contents()
-- Dynamically changes the page's favicon
+- Dynamically changes the page's favicon:
   By calling change_fav_icon(url)
 
 What it will (probably) do in the future
