@@ -25,6 +25,8 @@ What it does
 ===
 - Implements Tabnabbing (check out http://www.azarask.in/blog/post/a-new-type-of-phishing-attack/)
   By importing the app files into an HTML page.
+- Decides which website the victim visits more often
+  so that its counterfeit can be constructed.
 
 What is also does
 ===
@@ -33,9 +35,7 @@ What is also does
 - Dynamically changes the page's favicon
   By calling change_fav_icon(url)
 
-What it will do in the future
+What it will (probably) do in the future
 ===
-- Decide which website the victim visits more often
-  and construct its counterfeit.
 - Dynamically construct webpage source code and
   webpage objects.
