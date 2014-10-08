@@ -7,7 +7,7 @@
 */
 
 // A sitefinder object
-function SiteFinder() {
+function SiteFinder(bringSites) {
 	var sites = {
 	"Digg": ["http://digg.com", "http://digg.com/login"],
 	"Reddit": ["http://reddit.com", "http://reddit.com/new/", "http://reddit.com/controversial/", "http://reddit.com/top/", "http://reddit.com/r/reddit.com/", "http://reddit.com/r/programming/"],
@@ -45,15 +45,10 @@ function SiteFinder() {
 	"Subbmitt": ["http://subbmitt.com/"]
 	};
 	
-	this.visitedSites = get_visited_sites();
-	var asd;
+	this.visitedSites = create_iframe();
+	
 	function get_visited_sites() {
-		var s = this.visitedSites;
-		document.addEventListener('DOMContentLoaded', function() {
-			s = create_iframe();
-			
-		}, false);
-		return this;
+		return this.visitedSites;
 	}	
   
 	function create_iframe() {
@@ -79,12 +74,10 @@ function SiteFinder() {
 			
 				for (var i =0; i < sites[key].length; i++) {
 					iframeDoc.write('<a href="' + sites[key][i] + '">' + key + '</a>');
-					
 				}
 			}
 			
 			iframeDoc.close();
-			console.log(find_visited_sites());
 			return find_visited_sites();
 	}
   
@@ -107,7 +100,6 @@ function SiteFinder() {
 				}
 			}
 		}
-
 		return vSites;
 	}
   
