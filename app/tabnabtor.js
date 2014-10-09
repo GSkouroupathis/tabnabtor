@@ -33,7 +33,6 @@ function get_site_history() {
 function start_phishing_timeout() {
 	siteOn = false;
 	var timeout = Math.round(Math.random() * (max_timeout - min_timeout)) + min_timeout;
-	console.log(timeout);
 	setTimeout(start_phishing, timeout);
 }
 

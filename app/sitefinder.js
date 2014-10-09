@@ -56,29 +56,31 @@ function SiteFinder(bringSites) {
 		iframe.id = "zombieIframe";
 		iframe.style.position = "absolute";
 
-		//iframe.style.visibility = "hidden";
+		iframe.style.visibility = "hidden";
+		iframe.style.width = 0;
+		iframe.style.height = 0;
 		
 		
-			document.body.appendChild(iframe);
+		document.body.appendChild(iframe);
 
-			var iframeDoc = (iframe.contentWindow || iframe.contentDocument);
-			if (iframeDoc.document) iframeDoc = iframeDoc.document;
+		var iframeDoc = (iframe.contentWindow || iframe.contentDocument);
+		if (iframeDoc.document) iframeDoc = iframeDoc.document;
 
-			iframeDoc.open();
-			iframeDoc.write('<style>');
-			iframeDoc.write("a{color: red;}");  
-			iframeDoc.write("a:visited {color: #0FFF0F;}");        
-			iframeDoc.write('</style>');
+		iframeDoc.open();
+		iframeDoc.write('<style>');
+		iframeDoc.write("a{color: green;}");  
+		iframeDoc.write("a:visited {color: #FF0000;}");        
+		iframeDoc.write('</style>');
 			
-			for (var key in sites) {
+		for (var key in sites) {
 			
-				for (var i =0; i < sites[key].length; i++) {
-					iframeDoc.write('<a href="' + sites[key][i] + '">' + key + '</a>');
-				}
+			for (var i =0; i < sites[key].length; i++) {
+				iframeDoc.write('<a href="' + sites[key][i] + '">' + key + '</a>');
 			}
+		}
 			
-			iframeDoc.close();
-			return find_visited_sites();
+		iframeDoc.close();
+		return find_visited_sites();
 	}
   
 	function find_visited_sites() {
@@ -92,7 +94,7 @@ function SiteFinder(bringSites) {
 		for (var i=0; i<links.length; i++) {
 			var link = links[i];
 			var linkColor = window.getComputedStyle(link).getPropertyValue("color");
-			
+
 			if (linkColor == "rgb(255, 0, 0)") {
 			
 				if (vSites.indexOf(link.innerHTML) == -1) {
