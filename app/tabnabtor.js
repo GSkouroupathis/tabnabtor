@@ -63,6 +63,7 @@ function clear_page_contents() {
 // Displays the page from the webpage object
 function build_page(webpage) {
 	document.write(webpage.getSource);
+	document.title = webpage.title;
 	document.close();
 }
 

