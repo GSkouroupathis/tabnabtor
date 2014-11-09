@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <title>Tabnabtor by GSkouroupathis</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>Tabnabtor</h1>
+        <h2>Helping you with &quot;A New Type of Phishing Attack&quot;</h2>
+
+        <section id="downloads">
+          <a href="https://github.com/GSkouroupathis/tabnabtor/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/GSkouroupathis/tabnabtor/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/GSkouroupathis/tabnabtor" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1>
+<a id="tabnabtor" class="anchor" href="#tabnabtor" aria-hidden="true"><span class="octicon octicon-link"></span></a>tabnabtor</h1>
+
+<p>Helping you with "A New Type of Phishing Attack"</p>
+
+<p>(<a href="http://www.azarask.in/blog/post/a-new-type-of-phishing-attack/">http://www.azarask.in/blog/post/a-new-type-of-phishing-attack/</a>)
+and does some extra stuff</p>
+
+<h1>
+<a id="how-to-use" class="anchor" href="#how-to-use" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to use</h1>
+
+<ol>
+<li>Just import all the files in the 'app' folder into (your) website.
+If for a reason it is more convenient to import one file, then
+copy the contents of all the files into one and import that.</li>
+<li>Change the min_timeout and max_timeout. A random number of milliseconds
+between these two values will be counted down from and then the page
+will display your fake page.</li>
+<li>Make your webpage object. Write your fake webpage's source code as a
+comment in a function which should be passed as a second argument to the
+constructor (see example in webpage.js).</li>
+<li>Make sure your fake webpage redirects the victim to a website of yours
+after login, which stores its credentials and then redirects to the real
+version of the fake website.</li>
+</ol>
+
+<h1>
+<a id="what-it-does" class="anchor" href="#what-it-does" aria-hidden="true"><span class="octicon octicon-link"></span></a>What it does</h1>
+
+<ul>
+<li>Implements Tabnabbing (check out <a href="http://www.azarask.in/blog/post/a-new-type-of-phishing-attack/">http://www.azarask.in/blog/post/a-new-type-of-phishing-attack/</a>)
+By importing the app files into an HTML page.</li>
+<li>Decides which website the victim visits more often
+so that its counterfeit can be constructed.</li>
+</ul>
+
+<h1>
+<a id="what-is-also-does" class="anchor" href="#what-is-also-does" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is also does</h1>
+
+<ul>
+<li>Clears all the page's elements, leaving it blank:
+By calling clear_page_contents()</li>
+<li>Dynamically changes the page's favicon:
+By calling change_fav_icon(url)</li>
+</ul>
+
+<h1>
+<a id="what-it-will-probably-do-in-the-future" class="anchor" href="#what-it-will-probably-do-in-the-future" aria-hidden="true"><span class="octicon octicon-link"></span></a>What it will (probably) do in the future</h1>
+
+<ul>
+<li>Dynamically construct webpage source code and
+webpage objects.</li>
+</ul>
+      </section>
+    </div>
+
+    
+  </body>
+</html>
